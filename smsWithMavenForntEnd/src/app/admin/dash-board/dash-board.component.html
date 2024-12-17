@@ -1,0 +1,318 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Dashboard</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a th:href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="section" *ngIf="totalFemale10 != null">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="card">
+          <div class="card-title col-lg-12" style="text-align: center">
+            STATISTICS
+          </div>
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-xxl-4 col-md-4">
+                <div
+                  class="card info-card total_employees_card"
+                  style="
+                    border-radius: 15px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                  "
+                >
+                  <div class="card-body">
+                    <!--                    <h5 class="card-title" style="color: #007BFF; font-weight: bold;">Total Students :<span th:text="${totalStudentCount}"></span>  </h5>-->
+
+                    <h5
+                      class="card-title"
+                      style="color: #007bff; font-weight: bold"
+                    >
+                      Total Students : {{totalStudents}}
+                      <span style="font-weight: bold; font-size: 1.2em"></span>
+                    </h5>
+
+                    <div class="d-flex align-items-center">
+                      <div
+                        class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-primary"
+                        style="width: 40px; height: 40px; color: #fff"
+                      >
+                        <i class="bi bi-people"></i>
+                      </div>
+                      <div class="ps-3">
+                        <div class="d-flex justify-content-between">
+                          <div style="color: #dc3545">
+                            <span class="small fw-bold" id="girlsCount"
+                              >Total Boys: {{ totalMaleSt }} &nbsp; &nbsp;</span
+                            >
+                          </div>
+                          <div style="color: #007bff">
+                            <span class="small fw-bold" id="boysCount"
+                              >Total Girls: {{ totalFemaleSt }}</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xxl-4 col-md-4">
+                <div
+                  class="card info-card total_employees_card"
+                  style="
+                    border-radius: 15px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                  "
+                >
+                  <div class="card-body">
+                    <h5
+                      class="card-title"
+                      style="color: #007bff; font-weight: bold"
+                    >
+                      Total Teachers : {{totalTeachers}}
+                      <span style="font-weight: bold; font-size: 1.2em"></span>
+                    </h5>
+                    <div class="d-flex align-items-center">
+                      <div
+                        class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-primary"
+                        style="width: 40px; height: 40px; color: #fff"
+                      >
+                        <i class="bi bi-people"></i>
+                      </div>
+                      <div class="ps-3">
+                        <div class="d-flex justify-content-between">
+                          <div style="color: #dc3545">
+                            <span class="small fw-bold">Total Sirs: {{ totalMaleTe }} &nbsp; &nbsp; </span> 
+                          </div> 
+                          <div style="color: #007bff">
+                            <span class="small fw-bold">Total Mams: {{ totalFemaleTe }}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xxl-4 col-md-4">
+                <div
+                  class="card info-card total_employees_card"
+                  style="
+                    border-radius: 15px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                  "
+                >
+                  <div class="card-body">
+                    <h5
+                      class="card-title"
+                      style="color: #007bff; font-weight: bold"
+                    >
+                      Class 6 Students : {{ totalClass6 }}
+                      <span style="font-weight: bold; font-size: 1.2em"></span>
+                    </h5>
+                    <div class="d-flex align-items-center">
+                      <div
+                        class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-primary"
+                        style="width: 40px; height: 40px; color: #fff"
+                      >
+                        <i class="bi bi-people"></i>
+                      </div>
+                      <div class="ps-3">
+                        <div class="d-flex justify-content-between">
+                          <div style="color: #dc3545">
+                            <span class="small fw-bold">Total Boys: {{totalMale6}} &nbsp; &nbsp;</span>
+                          </div>
+                          <div style="color: #007bff">
+                            <span class="small fw-bold">Total Girls: {{totalFemale6}}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xxl-4 col-md-4">
+                <div
+                  class="card info-card total_employees_card"
+                  style="
+                    border-radius: 15px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                  "
+                >
+                  <div class="card-body">
+                    <h5
+                      class="card-title"
+                      style="color: #007bff; font-weight: bold"
+                    >
+                      Class 7 Students : {{totalClass7}}
+                      <span
+                        th:text="${totalStudentCount}"
+                        style="font-weight: bold; font-size: 1.2em"
+                      ></span>
+                    </h5>
+                    <div class="d-flex align-items-center">
+                      <div
+                        class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-primary"
+                        style="width: 40px; height: 40px; color: #fff"
+                      >
+                        <i class="bi bi-people"></i>
+                      </div>
+                      <div class="ps-3">
+                        <div class="d-flex justify-content-between">
+                          <div style="color: #dc3545">
+                            <span class="small fw-bold">Total Boys: {{totalMale7}} &nbsp; &nbsp;</span>
+                          </div>
+                          <div style="color: #007bff">
+                            <span class="small fw-bold">Total Girls: {{totalFemale7}}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xxl-4 col-md-4">
+                <div
+                  class="card info-card total_employees_card"
+                  style="
+                    border-radius: 15px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                  "
+                >
+                  <div class="card-body">
+                    <h5
+                      class="card-title"
+                      style="color: #007bff; font-weight: bold"
+                    >
+                      Class 8 Students : {{totalClass8}}
+                      <span
+                        th:text="${totalStudentCount}"
+                        style="font-weight: bold; font-size: 1.2em"
+                      ></span>
+                    </h5>
+                    <div class="d-flex align-items-center">
+                      <div
+                        class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-primary"
+                        style="width: 40px; height: 40px; color: #fff"
+                      >
+                        <i class="bi bi-people"></i>
+                      </div>
+                      <div class="ps-3">
+                        <div class="d-flex justify-content-between">
+                          <div style="color: #dc3545">
+                            <span class="small fw-bold">Total Boys: {{totalMale8}} &nbsp; &nbsp;</span>
+                          </div>
+                          <div style="color: #007bff">
+                            <span class="small fw-bold">Total Girls: {{totalFemale8}}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- </div> -->
+
+            <div class="col-xxl-4 col-md-4">
+              <div
+                class="card info-card total_employees_card"
+                style="
+                  border-radius: 15px;
+                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <div class="card-body">
+                  <h5
+                    class="card-title"
+                    style="color: #007bff; font-weight: bold"
+                  >
+                    Class 9 Students : {{totalClass9}}
+                    <span
+                      th:text="${totalStudentCount}"
+                      style="font-weight: bold; font-size: 1.2em"
+                    ></span>
+                  </h5>
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-primary"
+                      style="width: 40px; height: 40px; color: #fff"
+                    >
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <div class="d-flex justify-content-between">
+                        <div style="color: #dc3545">
+                          <span class="small fw-bold">Total Boys: {{totalMale9}} &nbsp; &nbsp;</span>
+                        </div>
+                        <div style="color: #007bff">
+                          <span class="small fw-bold">Total Girls: {{totalFemale9}}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+
+          <div class="col-xxl-4 col-md-4">
+            <div
+              class="card info-card total_employees_card"
+              style="
+                border-radius: 15px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              "
+            >
+              <div class="card-body">
+                <h5
+                  class="card-title"
+                  style="color: #007bff; font-weight: bold"
+                >
+                  Class 10 Students : {{totalClass10}}
+                  <span
+                    th:text="${totalStudentCount}"
+                    style="font-weight: bold; font-size: 1.2em"
+                  ></span>
+                </h5>
+                <div class="d-flex align-items-center">
+                  <div
+                    class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-primary"
+                    style="width: 40px; height: 40px; color: #fff"
+                  >
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="ps-3">
+                    <div class="d-flex justify-content-between">
+                      <div style="color: #dc3545">
+                        <span class="small fw-bold">Total Boys: {{totalMale10}} &nbsp; &nbsp;</span>
+                      </div>
+                      <div style="color: #007bff">
+                        <span class="small fw-bold">Total Girls: {{totalFemale10}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            <!-- Total Employees Card -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- End #main -->

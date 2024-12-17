@@ -1,0 +1,305 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Dashboard</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a>Rutine</a></li>
+        <li class="breadcrumb-item active">Class Rutine Add Form</li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Class Rutine Form</h5>
+
+            <!-- Browser Default Validation -->
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label"><b>Class</b> </label>
+                <select class="form-select">
+                  <!--                                    <option value="" selected>Select Class</option>-->
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label"><b>Day</b> </label>
+                <select class="form-select" th:field="*{crDay}">
+                  <option value="" selected>Select Day</option>
+                  <option value="SUNDAY">SUN_DAY</option>
+                  <option value="MONDAY">MON_DAY</option>
+                  <option value="TUESDAY">TUES_DAY</option>
+                  <option value="WEDNESDAY">WEDNES_DAY</option>
+                  <option value="THURSDAY">THURS_DAY</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label text-success"><b>1st Period</b></label>
+                <select class="form-select">
+                  <option value="" selected>Selete Subject</option>
+                  <option value="Bangla">Bangla</option>
+                  <option value="Math">Math</option>
+                  <option value="English">English</option>
+                  <option value="ICT">ICT</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Scince">Scince</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <select class="form-select">
+                  <option>Selete Teacher</option>
+                  <option value="Robiul Islam">Robiul Islam</option>
+                  <option>Sabit hasan</option>
+                  <option>Rajib Khan</option>
+                  <option>Mamun Sheik</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Class Time Input"
+                />
+              </div>
+
+              <!--                            ---------------------------------------->
+
+              <div class="col-md-4">
+                <label class="form-label text-success"><b>2nd Period</b></label>
+                <select class="form-select">
+                  <option value="" selected>Selete Subject</option>
+                  <option value="Bangla">Bangla</option>
+                  <option value="Math">Math</option>
+                  <option value="English">English</option>
+                  <option value="ICT">ICT</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Scince">Scince</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <select class="form-select">
+                  <option>Selete Teacher</option>
+                  <option value="Robiul Islam">Robiul Islam</option>
+                  <option>Sabit hasan</option>
+                  <option>Rajib Khan</option>
+                  <option>Mamun Sheik</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Class Time Input"
+                />
+              </div>
+              <!--                            ------------------------>
+
+              <div class="col-md-4">
+                <label class="form-label text-success"><b>3rd Period</b></label>
+                <select class="form-select">
+                  <option value="" selected>Selete Subject</option>
+                  <option value="Bangla">Bangla</option>
+                  <option value="Math">Math</option>
+                  <option value="English">English</option>
+                  <option value="ICT">ICT</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Scince">Scince</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <select class="form-select">
+                  <option>Selete Teacher</option>
+                  <option value="Robiul Islam">Robiul Islam</option>
+                  <option>Sabit hasan</option>
+                  <option>Rajib Khan</option>
+                  <option>Mamun Sheik</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Class Time Input"
+                />
+              </div>
+              <!--                            ------------------------------->
+
+              <div class="col-md-4">
+                <label class="form-label text-success"><b>4th Period</b></label>
+                <select class="form-select">
+                  <option value="" selected>Selete Subject</option>
+                  <option value="Bangla">Bangla</option>
+                  <option value="Math">Math</option>
+                  <option value="English">English</option>
+                  <option value="ICT">ICT</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Scince">Scince</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <select class="form-select">
+                  <option>Selete Teacher</option>
+                  <option value="Robiul Islam">Robiul Islam</option>
+                  <option>Sabit hasan</option>
+                  <option>Rajib Khan</option>
+                  <option>Mamun Sheik</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Class Time Input"
+                />
+              </div>
+
+              <!--                            -------------------------------->
+
+              <div class="col-md-4">
+                <label class="form-label text-success"><b>5th Period</b></label>
+                <select class="form-select">
+                  <option value="" selected>Selete Subject</option>
+                  <option value="Bangla">Bangla</option>
+                  <option value="Math">Math</option>
+                  <option value="English">English</option>
+                  <option value="ICT">ICT</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Scince">Scince</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <select class="form-select">
+                  <option>Selete Teacher</option>
+                  <option value="Robiul Islam">Robiul Islam</option>
+                  <option>Sabit hasan</option>
+                  <option>Rajib Khan</option>
+                  <option>Mamun Sheik</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Class Time Input"
+                />
+              </div>
+              <!--                            ---------------------------->
+
+              <div class="col-md-4">
+                <label class="form-label text-success"><b>6th Period</b></label>
+                <select class="form-select">
+                  <option value="" selected>Selete Subject</option>
+                  <option value="Bangla">Bangla</option>
+                  <option value="Math">Math</option>
+                  <option value="English">English</option>
+                  <option value="ICT">ICT</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Scince">Scince</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <select class="form-select">
+                  <option>Selete Teacher</option>
+                  <option value="Robiul Islam">Robiul Islam</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Class Time Input"
+                />
+              </div>
+              <!--                            ------------------------------>
+
+              <div class="col-md-4">
+                <label class="form-label text-success"><b>7th Period</b></label>
+                <select class="form-select">
+                  <option value="" selected>Selete Subject</option>
+                  <option value="Bangla">Bangla</option>
+                  <option value="Math">Math</option>
+                  <option value="English">English</option>
+                  <option value="ICT">ICT</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Scince">Scince</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <select class="form-select">
+                  <option>Selete Teacher</option>
+                  <option value="Robiul Islam">Robiul Islam</option>
+                  <option>Sabit hasan</option>
+                  <option>Rajib Khan</option>
+                  <option>Mamun Sheik</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">&nbsp;</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Class Time Input"
+                />
+              </div>
+
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="invalidCheck2"
+                    required
+                  />
+                  <label class="form-check-label" for="invalidCheck2">
+                    Check Properly and confirm form
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <a class="btn btn-info" routerLink="/classrutineview"
+                  >Submit
+                  <!-- <input type="submit" value="Submit" class="btn btn-info"> -->
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- End #main -->

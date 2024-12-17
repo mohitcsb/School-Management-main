@@ -1,0 +1,75 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Dashboard</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="">Student</a></li>
+        <li class="breadcrumb-item active">View Student</li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <!-- start my work-->
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              Student Attendance Form
+            </h5>
+            <div class="row">
+              <!-- <div class="col-md-3">
+                <label class="form-label">Class</label>
+                <select class="form-select" formControlName>
+                  <option value="" selected>Choose Class</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div> -->
+            <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+              <div class="row mb-3 py-3">
+                <!-- Date Field -->
+                <div class="col-md-6 py-2">
+                  <label class="form-label">Date</label>
+                  <input type="date" class="form-control" formControlName="a_dates"/>
+                </div>
+
+                <!-- Student Id Dropdown -->
+                <div class="col-md-6 py-2">
+                  <label class="form-label">Student Id</label>
+                  <select formControlName="sid" class="form-select">
+                    <option *ngFor="let ssid of studentData" [value]="ssid.sid">{{ ssid.sid }}</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 py-2">
+                  <label class="form-label">Attendance</label>
+                  <select formControlName="aattendance" class="form-select">
+                    <option value="present">Present</option>
+                    <option value="absent">Absent</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 py-2">
+                  <label class="form-label">SSID</label>
+                  <input type="number" class="form-control" formControlName="ssid"/>
+                </div>
+
+              </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            </div>
+            <!-- End Table with stripped rows -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

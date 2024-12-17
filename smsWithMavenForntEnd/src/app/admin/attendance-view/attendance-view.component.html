@@ -1,0 +1,59 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<main id="main" class="main">
+  <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="">View Attendance</a></li>
+              <li class="breadcrumb-item active">View Student Attendance</li>
+          </ol>
+      </nav>
+  </div>
+
+<section class="section">
+  <div class="row">
+    <div class="col-lg-12">
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">View Attendance</h5>
+
+          <!-- <table class="table datatable"> -->
+          <table class="table table-striped">
+            <thead>
+            <tr>
+
+              <th>Attendance Id</th>
+              <th>Attendance Date</th>
+              <th>Student Id</th>
+              <th>
+                SS<b>I</b>D
+              </th>
+              <th>Attendance Status</th> <!-- exdate1  -->
+              <th>Student Name</th>
+              <!-- <th data-type="date" data-format="YYYY/DD/MM">Payment Date</th>
+
+              <th>Action</th> -->
+            </tr>
+            </thead>
+
+            <tbody *ngFor="let att of attData">
+            <tr>
+              <td>{{ att.aid }}</td>
+              <td>{{ att.adates }}</td>
+              <td>{{ att.student.sid }}</td>
+              <td>{{ att.ssid }} </td>
+              <td>{{ att.aattendance}}</td>
+              <td>{{ att.student.stfirstname }} {{ att.student.stlastname }}</td>
+            </tr>
+            </tbody>
+          </table>
+          <!-- End Table with stripped rows -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
